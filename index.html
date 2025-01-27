@@ -1,104 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Align your sould, body, and mind">
-  <meta name="author" content="Soulsyncify - Align for Success">
-  <title>Soulsyncify</title>
-  <script id="shader-fs" type="x-shader/x-fragment">
-      #ifdef GL_ES
-        precision highp float;
-        #endif
-        
-       uniform vec4 color;
-       
-      void main(void) {
-       gl_FragColor = color;
-      }
-  </script>
-  <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 vertexPosition;
-    uniform mat4 modelViewMatrix;
-    uniform mat4 perspectiveMatrix;
-    void main(void) {
-      gl_Position = perspectiveMatrix * modelViewMatrix * vec4(vertexPosition, 1.0);
-    } 
-  </script>
-  <!-- Style -->
-  <link type="text/css" rel="stylesheet" href="style.css"/>
-  <!-- Custom Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <!-- start Mixpanel -->
-  <script type="text/javascript">
-    (function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
-    0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-    for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-    MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
-    mixpanel.init("817e3b78d0c3e37578cec380f1c73df7");
-  </script>
-  <!-- end Mixpanel -->
-  <!-- start Mixpanel -->
-  <script type="text/javascript">
-    (function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
-    0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-    for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-    MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
-    mixpanel.init("817e3b78d0c3e37578cec380f1c73df7");
-  </script>
-  <!-- end Mixpanel -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulsyncify - Align Your Purpose with Your Career</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background: url('/mnt/data/soulsyncify_hero.png') no-repeat center center/cover;
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+        }
+    </style>
 </head>
-<body>
-  <canvas id="webGLCanvas"></canvas>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-indigo-600 text-white py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Soulsyncify</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#how-it-works" class="hover:underline">How It Works</a></li>
+                    <li><a href="#features" class="hover:underline">Features</a></li>
+                    <li><a href="#testimonials" class="hover:underline">Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div id="content">          
-    <div class="main_box">
-      <h2>Soulsyncify<br/></h2>
-      <ul class="info">
-        <li>
-          <h3><i>A javascript and product enthusiast.</i></h3>
-        </li>
-        <li>
-          <p>
-            <b><i>Product Management,</i></b>
-            <b><i>Grwoth Hacking,</i></b>
-            <b><i>Strategic Planning & Execution,</i></b>
-            <b><i>Team Management,</i></b>
-            <b><i>Web Development,</i></b>
-            <b><i>System Design,</i></b>
-            <b><i>Application architecture</i></b>
-          </p>
-        </li>
-        <li>
-          <p>
-            <b><i>NodeJs, </i></b>
-            <b><i>Angular Js - 5,</i></b>
-            <b><i>ReactJs,</i></b>
-            <b><i>ExpressJs,</i></b>
-            <b><i>MongoDb,</i></b>
-            <b><i>Elasticsearch,</i></b>
-            <b><i>D3Js,</i></b>
-            <b><i>AWS/Azure,</i></b>
-            <b><i>DevOps Automation (CI/CD)</i></b>
-          </p>
-        </li>
-        <li>
-          <p class="social">
-            <a href='https://linkedin.com/in/akasharun' title='Linkedin' target='_blank' class="linkedin"></a>
-            <a href='https://github.com/akash23' title='Github' target='_blank' class="github"></a>       
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script>mixpanel.track("Landing Page Loaded")</script>
-  <script type="text/javascript" src="script.js"></script>
+    <section class="hero-bg relative text-white py-32">
+        <div class="gradient-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-5xl font-extrabold">Find Your Purpose, Unlock Your Career</h2>
+            <p class="mt-4 text-lg">Discover a profession that aligns with your unique nature and purpose using a holistic, science-backed approach.</p>
+            <a href="#cta" class="mt-6 inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg shadow-lg hover:bg-indigo-700">Take the Free Personality Test</a>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-gray-800 text-center">How It Works</h3>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105">
+                    <img src="https://via.placeholder.com/100" alt="Step 1 Icon" class="mx-auto mb-4">
+                    <h4 class="text-xl font-bold text-indigo-600">Step 1: Discover Yourself</h4>
+                    <p class="mt-4 text-gray-600">Take our personality and purpose assessment, powered by psychometric tests, astrology, and spiritual alignment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105">
+                    <img src="https://via.placeholder.com/100" alt="Step 2 Icon" class="mx-auto mb-4">
+                    <h4 class="text-xl font-bold text-indigo-600">Step 2: Understand Your Path</h4>
+                    <p class="mt-4 text-gray-600">Receive a personalized report detailing your natural strengths, purpose, and career alignment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105">
+                    <img src="https://via.placeholder.com/100" alt="Step 3 Icon" class="mx-auto mb-4">
+                    <h4 class="text-xl font-bold text-indigo-600">Step 3: Take Action</h4>
+                    <p class="mt-4 text-gray-600">Follow our expert guidance to align with a fulfilling profession and achieve your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-gray-800 text-center">What Makes Us Different</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="flex items-start">
+                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mr-4">
+                    <p class="text-gray-600">Holistic approach combining psychometric tests, astrology, numerology, and spiritual insights.</p>
+                </div>
+                <div class="flex items-start">
+                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mr-4">
+                    <p class="text-gray-600">Personalized career alignment report for every individual.</p>
+                </div>
+                <div class="flex items-start">
+                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mr-4">
+                    <p class="text-gray-600">Guidance from certified experts in multiple disciplines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-gray-800 text-center">What Our Clients Say</h3>
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600">"Soulsyncify helped me uncover my true potential and guided me to a career that feels deeply fulfilling. Highly recommend!"</p>
+                    <p class="mt-4 font-bold text-indigo-600">- Priya S.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-600">"The blend of science and spirituality in their approach is unmatched. It changed my perspective on life and work."</p>
+                    <p class="mt-4 font-bold text-indigo-600">- Rahul M.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="bg-indigo-600 py-16 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-4xl font-bold">Take the First Step Toward Your Dream Career</h3>
+            <p class="mt-4 text-lg">Discover your purpose and align with a career you love. It all starts with a short, free test!</p>
+            <a href="#" class="mt-6 inline-block bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg shadow-lg hover:bg-gray-100">Start the Free Test</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Soulsyncify. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
