@@ -12,14 +12,23 @@
         .gradient-overlay {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
         }
+        @media (max-width: 768px) {
+            header h1 {
+                text-xl;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-center;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
     <header class="bg-indigo-600 text-white py-6">
-        <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 flex justify-between items-center flex-wrap">
             <h1 class="text-3xl font-bold">Soulsyncify</h1>
             <nav>
-                <ul class="flex space-x-6">
+                <ul class="flex flex-wrap space-x-6 justify-center">
                     <li><a href="#how-it-works" class="hover:underline">How It Works</a></li>
                     <li><a href="#features" class="hover:underline">Features</a></li>
                     <li><a href="#testimonials" class="hover:underline">Testimonials</a></li>
@@ -65,17 +74,28 @@
             <h3 class="text-4xl font-bold text-gray-800 text-center">What Makes Us Different</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 <div class="flex items-start">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mr-4">
+                    <img src="soulsyncify_interconnected_elements.webp" alt="Feature Icon" class="mr-4">
                     <p class="text-gray-600">Holistic approach combining psychometric tests, astrology, numerology, and spiritual insights.</p>
                 </div>
                 <div class="flex items-start">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mr-4">
+                    <img src="soulsyncify_personalised_guidance.webp" alt="Feature Icon" class="mr-4">
                     <p class="text-gray-600">Personalized career alignment report for every individual.</p>
                 </div>
                 <div class="flex items-start">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mr-4">
+                    <img src="soulsyncify_expert_guidance.webp" alt="Feature Icon" class="mr-4">
                     <p class="text-gray-600">Guidance from certified experts in multiple disciplines.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coach" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-gray-800 text-center">Meet Your Coach</h3>
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-600">Arvind Sanganwar, the visionary behind Soulsyncify, is an accomplished Mind Coach with expertise in Neuro-Linguistic Programming (NLP), career counseling, and personal transformation.</p>
+                <p class="mt-4 text-lg text-gray-600">As the founder of the Metamorphosis Revolution, Arvind has guided countless individuals to discover their purpose and align their careers with their true potential.</p>
+                <p class="mt-4 text-lg text-gray-600">With a passion for holistic development and a proven track record, Arvind ensures every Soulsyncify client embarks on a transformative journey toward success and fulfillment.</p>
             </div>
         </div>
     </section>
@@ -85,13 +105,16 @@
             <h3 class="text-4xl font-bold text-gray-800 text-center">What Our Clients Say</h3>
             <div class="mt-12 grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600">"Soulsyncify helped me uncover my true potential and guided me to a career that feels deeply fulfilling. Highly recommend!"</p>
-                    <p class="mt-4 font-bold text-indigo-600">- Priya S.</p>
+                    <p class="text-gray-600">"I recently joined vision to victory program which really opened my eyes, I realised things which i never thought of. The sessions conducted were really insightful and interactive."</p>
+                    <p class="mt-4 font-bold text-indigo-600">- vijay manoj</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-gray-600">"The blend of science and spirituality in their approach is unmatched. It changed my perspective on life and work."</p>
-                    <p class="mt-4 font-bold text-indigo-600">- Rahul M.</p>
+                    <p class="text-gray-600">"One step in the right direction is far greater than a thousand steps in the wrong direction. Registering for the 'Vision to Victory: Design Your 2025' Challenge conducted by Arvind Sanganwar Sir was the one right step I took towards rebuilding my life. Each session of this Challenge was eye opening, deeply engaging and life transforming. I express my deepest gratitude and congratulations to Arvind Sir and Team Soul Syncify for creating such a powerful program. A must for all who want to live an extraordinary life and be a goal getter!"</p>
+                    <p class="mt-4 font-bold text-indigo-600">- Kiranbala Lakhmania</p>
                 </div>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="https://tinyurl.com/2xhxuuhj" target="_blank" class="text-indigo-600 hover:underline text-lg">Read More Testimonials on Google Reviews</a>
             </div>
         </div>
     </section>
